@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex center column wrapper">
+        <div class="flex center space-between header-block padding-5">
+            <div class="flex center">
+                <h1>QRCode</h1>
+            </div>
+
+            <div class="flex center gap-5">
+                <img class="icon" src="../images/donate.png" title="Donate" alt="">
+                <img class="icon" src="../images/settings.png" title="Settings" alt="">
+            </div>
+        </div>
+
+        <div class="flex center qr-code-block">
+            <div id="qrcode">
+                <!--QRCode will appear here-->
+            </div>
+        </div>
+    
+        <div class="flex cetner buttons-block padding-5 gap-5">
+            <input class="url padding-5" id="url-input" type="text" placeholder="Type something here...">
+            <button class="generate" id="generate-btn">Generate</button>
+        </div>
+    </div>
+
+    <script src="../lib/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "QRCode",
+    "description": "Extension for generating QR codes",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup/index.html"
+    },
+    "permissions": [
+        "storage"
+    ]
+  }
