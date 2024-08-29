@@ -1,0 +1,28 @@
+# What is this?
+It is a browser extension that allows you to quickly create qr-code in different sizes and colors.
+
+> [!CAUTION]
+> The extension is still under development and may contain bugs.
+
+# Installation
+
+The extension can be downloaded in the release section.
+
+1)Open Chrome or Opera: Ensure you have the Chrome or Opera browser open.
+
+2)Go to Extensions Page:
+- For Chrome: Enter chrome://extensions in the address bar.
+- For Opera: Enter opera://extensions in the address bar.
+
+3)Enable Developer Mode: On the Extensions page, toggle the switch for Developer mode in the top-right corner.
+
+4)Unzip the Extension: If your extension is in a zipped archive, extract the contents to a folder on your computer.
+
+5)Load Unpacked Extension:
+- Click the Load unpacked button.
+- Navigate to the directory where you extracted the extension.
+- Select the folder and click Select Folder (or Open).
+
+# Usage
+Enter a link or any text in the input box and click Generate! 
+To change sizes and colors, go to settings by clicking on the gear in the upper right corner.
