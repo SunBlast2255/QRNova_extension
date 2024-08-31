@@ -24,5 +24,15 @@ The extension can be downloaded in the release section.
 - Select the folder and click Select Folder (or Open).
 
 # Usage
-Enter a link or any text in the input box and click Generate! 
-To change sizes and colors, go to settings by clicking on the gear in the upper right corner.
+
+## QR code generation
+To generate a QR-Code, enter data (text or link) in the input field and click generate. The standard QR code that appears at startup will be replaced with yours.
+
+## Using the context menu
+
+Click on the qr code anywhere to open the context menu. There are 2 items in the context menu:
+
+- Save QR code as png
+- Copy to QR code to clipboard
+
+Click on the necessary item of the context menu to select it. To close the context menu click anywhere.
