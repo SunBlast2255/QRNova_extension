@@ -71,6 +71,27 @@ body{
     height: 24px;
 }
 
-button, img{
+button, img, .context-item{
     cursor: pointer;
 }
+
+.context{
+    position: absolute;
+    display: none;
+}
+
+.context-item{
+    width: 115px;
+    height: 24px;
+    border: 1px solid black;
+    background-color: white;
+    padding: 5px;
+}
+
+.context-item:hover{
+    height: 24px;
+    border: 1px solid black;
+    background-color: wheat;
+    padding: 5px;
+}
+
