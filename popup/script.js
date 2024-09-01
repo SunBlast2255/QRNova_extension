@@ -1,34 +1,17 @@
+//Generation
+
 async function generate(data){
     document.getElementById("qrcode").innerHTML = "";
 
     let settings = await getSettings();
 
-    let qr = new QRCode(document.getElementById("qrcode"), {
+    new QRCode(document.getElementById("qrcode"), {
         text: data,
         width: parseInt(settings.width),
         height: parseInt(settings.height),
         colorDark : settings.foreground,
         colorLight : settings.background,
         correctLevel : QRCode.CorrectLevel.H
-    });
-}
-
-async function getSettings(){
-    return new Promise((resolve, reject) => {
-        chrome.storage.local.get(null, function(result) {
-            if (chrome.runtime.lastError) {
-                return reject(chrome.runtime.lastError);
-            }
-            
-            if (Object.keys(result).length === 0) {
-                let defaultSettings = {background: "#FFFFFF", foreground: "#000000", width: "256", height: "256"};
-                chrome.storage.local.set(defaultSettings, function() {
-                    resolve(defaultSettings);
-                });
-            } else {
-                resolve(result);
-            }
-        });
     });
 }
 
@@ -42,7 +25,26 @@ document.getElementById("generate-btn").addEventListener("click", function() {
     generate(data);
 });
 
-//settings
+//Settings
+
+async function getSettings(){
+    return new Promise((resolve, reject) => {
+        chrome.storage.local.get(null, function(result) {
+            if (chrome.runtime.lastError) {
+                return reject(chrome.runtime.lastError);
+            }
+            
+            if (Object.keys(result).length === 0) {
+                let defaultSettings = {background: "#1C1C1E", foreground: "#FFFFFF", width: "256", height: "256"};
+                chrome.storage.local.set(defaultSettings, function() {
+                    resolve(defaultSettings);
+                });
+            } else {
+                resolve(result);
+            }
+        });
+    });
+}
 
 document.getElementById("settings-btn").addEventListener("click", async function() {
     document.getElementById("settings-modal").style.display = "flex";
@@ -56,12 +58,15 @@ document.getElementById("settings-btn").addEventListener("click", async function
 });
 
 document.getElementById("apply-btn").addEventListener("click", function() {
-    document.getElementById("settings-modal").style.display = "none";
 
     let background = document.getElementById("background").value;
     let foreground = document.getElementById("foreground").value;
     let width = document.getElementById("width").value;
     let height = document.getElementById("height").value;
+
+    if(!background || !foreground || !width || !height) {
+        return false;
+    }
 
     chrome.storage.local.set({
         background: background,
@@ -69,7 +74,17 @@ document.getElementById("apply-btn").addEventListener("click", function() {
         width: width,
         height: height
     });
+
+    document.getElementById("settings-modal").style.display = "none";
     
+});
+
+document.getElementById("reset").addEventListener("click", function() {
+    document.getElementById("height").value = 256;
+    document.getElementById("width").value = 256;
+
+    document.getElementById("background").value = "#1C1C1E";
+    document.getElementById("foreground").value = "#FFFFFF";
 });
 
 //context menu
@@ -127,3 +142,6 @@ window.addEventListener('click', function(){
     document.getElementById("context").style.display = "none";
 });
 
+window.oncontextmenu = function(){
+    return false;
+}

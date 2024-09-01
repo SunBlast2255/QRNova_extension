@@ -5,6 +5,8 @@
     user-select: none;
 }
 
+/*Blocks*/
+
 body{
     width: 300px;
     height: 400px;
@@ -25,28 +27,40 @@ body{
     top: 0;
 
     display: none;
-    background-color: white;
 }
 
 .header-block{
     width: 100%;
     height: 10%;
+
+    background-color: #1C1C1E;
+    color: #E0E0E0;
 }
 
 .qr-code-block{
     width: 100%;
     height: 80%;
+
+    background-color: #1C1C1E;
 }
 
 .buttons-block{
     width: 100%;
     height: 10%;
+
+    background-color: #1C1C1E;
+    color: #E0E0E0;
 }
 
 .settings-block{
     width: 100%;
     height: 90%;
+
+    background-color: #1C1C1E;
+    color: #E0E0E0;
 }
+
+/*Flex*/
 
 .flex{
     display: flex;
@@ -70,6 +84,8 @@ body{
     justify-content: center;
 }
 
+/*Gap, padding*/
+
 .gap-5{
     gap: 5px;
 }
@@ -82,45 +98,97 @@ body{
     padding: 5px;
 }
 
-.generate{
-    width: 25%;
-    height: 25px;
-}
-
-.url{
-    width: 75%;
-    height: 25px;
-}
+/*Images*/
 
 .icon{
     width: 24px;
     height: 24px;
 }
 
+/*Cursor*/
+
 button, img, .context-item, input[type="color"]{
     cursor: pointer;
 }
+
+/*Context*/
 
 .context{
     position: absolute;
     display: none;
 }
 
-.context-item{
+.context-item {
     width: 115px;
     height: 24px;
-    border: 1px solid black;
-    background-color: white;
+    border: 1px solid #303030; 
+    background-color: #1C1C1E; 
+    color: #E0E0E0; 
     padding: 5px;
+    transition: background-color 0.1s ease, color 0.1s ease;
 }
 
-.context-item:hover{
-    height: 24px;
-    border: 1px solid black;
-    background-color: wheat;
-    padding: 5px;
+.context-item:hover {
+    background-color: #FF9500;
+    color: white;
 }
+
+/*Inputs, buttons, links*/
 
 input[type="number"]{
     width: 64px;
+}
+
+input[type="text"], input[type="number"]{
+    background-color: #303030;
+    color: white;
+    border: 0;
+}
+
+input[type="text"], input[type="number"]:focus{
+    outline: 0;
+}
+
+input[type="text"], input[type="number"]::placeholder{
+    color: #E0E0E0;
+}
+
+input[type="color"]{
+    appearance: none;
+
+    width: 32px;
+    height: 32px;
+
+    background-color: #1C1C1E;
+    border: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+button {
+    background-color: #FF9500;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    height: 25px;
+
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+a{
+    color: #FF9500;
+    font-weight: bold;
+    text-decoration: none;
 }

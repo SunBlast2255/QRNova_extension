@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="flex center column wrapper">
+
+        <!--Main-->
+
         <div class="flex center space-between header-block padding-5">
             <div class="flex center">
                 <h1>QRCode</h1>
@@ -26,55 +29,73 @@
         </div>
     
         <div class="flex cetner buttons-block padding-5 gap-5">
-            <input class="url padding-5" id="url-input" type="text" placeholder="Type something here...">
-            <button class="generate" id="generate-btn">Generate</button>
+            <input class="padding-5" id="url-input" type="text" placeholder="Type something here..." style="width: 75%; height: 25px;">
+            <button id="generate-btn" style="width: 25%;">Generate</button>
         </div>
 
+        <!--Settings-->
+
         <div class="center column modal" id="settings-modal">
-            <div class="flex center space-between header-block padding-5" style="border-bottom: 1px solid black;">
+            <div class="flex center space-between header-block padding-5" style="border-bottom: 1px solid #E0E0E0;">
                 <h1>Settings</h1>
                 <img class="icon" id="apply-btn" src="../images/apply.png">
             </div>
 
-            <div class="flex column settings-block">
-                <div class="flex column padding-5">
-                    <div class="flex flex-start column">
-                        <h1>Size</h1>
-                    </div>
+            <div class="flex space-between column settings-block">
 
-                    <div class="flex gap-10">
-                        <div class="flex center gap-5">
-                            <label for="width">Width (px):</label>
-                            <input id="width" type="number" value="256">
+                <div>
+                    <div class="flex center column gap-5 padding-5">
+                        <div class="flex center">
+                            <h1>Size</h1>
                         </div>
 
-                        <div class="flex center gap-5">
-                            <label for="height">Height (px):</label>
-                            <input id="height" type="number" value="256">
+                        <div class="flex center gap-10">
+                            <div class="flex center gap-5">
+                                <label for="width">Width (px):</label>
+                                <input id="width" type="number" value="256">
+                            </div>
+
+                            <div class="flex center gap-5">
+                                <label for="height">Height (px):</label>
+                                <input id="height" type="number" value="256">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex center column gap-5 padding-5">
+                        <div class="flex center column">
+                            <h1>Color</h1>
+                        </div>
+
+                        <div class="flex center gap-10">
+                            <div class="flex center gap-5">
+                                <label for="background">Background:</label>
+                                <input id="background" type="color" value="#1C1C1E">
+                            </div>
+
+                            <div class="flex center gap-5">
+                                <label for="foreground">Foreground:</label>
+                                <input id="foreground" type="color" value="#FFFFFF">
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="flex column padding-5">
-                    <div class="flex flex-start column">
-                        <h1>Color</h1>
+                <div class="flex center column gap-10 padding-5">
+                    <div>
+                        <button id="reset" style="width: 100px;">Reset settings</button>
                     </div>
 
-                    <div class="flex gap-10">
-                        <div class="flex center gap-5">
-                            <label for="background">Background:</label>
-                            <input id="background" type="color" value="#FFFFFF">
-                        </div>
-
-                        <div class="flex center gap-5">
-                            <label for="foreground">Foreground:</label>
-                            <input id="foreground" type="color" value="#000000">
-                        </div>
+                    <div class="flex center column">
+                        <span>QRCode v1.0</span>
+                        <span>Powered by <a href="https://davidshimjs.github.io/qrcodejs/">qrcode.js</a></span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!--Context-->
 
     <div class="context" id="context">
         <div class="context-item">
