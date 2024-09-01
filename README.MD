@@ -1,5 +1,5 @@
-# What is this?
-It is a browser extension that allows you to quickly create qr-code in different sizes and colors.
+# What is QRNova?
+QRNova is a browser extension that allows you to quickly create qr-code in different sizes and colors.
 
 > [!CAUTION]
 > The extension is still under development and may contain bugs.
@@ -25,10 +25,10 @@ The extension can be downloaded in the release section.
 
 # Usage
 
-## QR code generation
+**QR code generation**
 To generate a QR-Code, enter data (text or link) in the input field and click generate. The standard QR code that appears at startup will be replaced with yours.
 
-## Using the context menu
+**Using the context menu**
 
 Click on the qr code anywhere to open the context menu. There are 2 items in the context menu:
 
