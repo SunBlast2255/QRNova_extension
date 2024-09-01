@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "QRCode",
+    "name": "QRNova",
     "description": "Extension for generating QR codes",
     "version": "1.0",
     "action": {
