@@ -87,7 +87,7 @@ document.getElementById("reset").addEventListener("click", function() {
     document.getElementById("foreground").value = "#FFFFFF";
 });
 
-//context menu
+//Context menu
 
 document.getElementById("qrcode").oncontextmenu = function (e){
     e.preventDefault();
@@ -145,3 +145,8 @@ window.addEventListener('click', function(){
 window.oncontextmenu = function(){
     return false;
 }
+
+//Donate
+document.getElementById("donate-btn").addEventListener("click", function(){
+    chrome.tabs.create({url: "../donate/donate.html"})
+});
