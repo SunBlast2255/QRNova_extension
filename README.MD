@@ -26,6 +26,7 @@ The extension can be downloaded in the release section.
 # Usage
 
 **QR code generation**
+
 To generate a QR-Code, enter data (text or link) in the input field and click generate. The standard QR code that appears at startup will be replaced with yours.
 
 **Using the context menu**
