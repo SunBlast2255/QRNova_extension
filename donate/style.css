@@ -8,6 +8,8 @@ body{
     font-family: Arial, sans-serif;
 }
 
+/*Blocks*/
+
 .wrapper{
     width: 100vw;
     height: 100vh;
@@ -27,6 +29,14 @@ body{
     align-items: center;
 }
 
+.QR-BLOCK{
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+/*Flex*/
+
 .flex{
     display: flex;
 }
@@ -39,6 +49,8 @@ body{
 .column{
     flex-direction: column;
 }
+
+/*Text*/
 
 h1{
     font-weight: bold;
@@ -58,21 +70,25 @@ a{
     text-decoration: none;
 }
 
-.QR{
-    width: 300px;
-    height: 300px;
-
-    margin: 5px;
-}
-
-.QR-BLOCK{
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 10px;
-}
-
 .address{
     width: fit-content;
     font-size: 15px;
+}
+
+/*Images*/
+
+.QR{
+    width: 300px;
+    height: 300px;
+    margin: 5px;
+
+    user-select: none;
+}
+
+/*Selection*/
+
+::selection {
+    background-color: #FF9500;
+    color: white; 
 }
 
