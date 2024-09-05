@@ -107,7 +107,7 @@ body{
 
 /*Cursor*/
 
-button, img, .context-item, input[type="color"]{
+button, img, .context-item, input[type="color"], a{
     cursor: pointer;
 }
 

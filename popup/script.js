@@ -150,3 +150,8 @@ window.oncontextmenu = function(){
 document.getElementById("donate-btn").addEventListener("click", function(){
     chrome.tabs.create({url: "../donate/donate.html"})
 });
+
+//links
+document.getElementById("qrcodejs").addEventListener("click", function(){
+    chrome.tabs.create({url: "https://davidshimjs.github.io/qrcodejs/"});
+});
