@@ -87,6 +87,10 @@ document.getElementById("apply-btn").addEventListener("click", function() {
         return false;
     }
 
+    if(width <= 0 || height <= 0) {
+        return false;
+    }
+
     chrome.storage.local.set({
         background: background,
         foreground: foreground,
