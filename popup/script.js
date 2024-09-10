@@ -1,22 +1,41 @@
 //Generation
 
-async function generate(data){
+function makeQR(element, width, height, data, settings) {
+    new QRCode(element, {
+        text: data,
+        width: width,
+        height: height,
+        colorDark: settings.foreground,
+        colorLight: settings.background,
+        correctLevel: QRCode.CorrectLevel.H
+    });
+}
+
+async function generate(data, isDefault){
     document.getElementById("qrcode").innerHTML = "";
 
     let settings = await getSettings();
 
-    new QRCode(document.getElementById("qrcode"), {
-        text: data,
-        width: parseInt(settings.width),
-        height: parseInt(settings.height),
-        colorDark : settings.foreground,
-        colorLight : settings.background,
-        correctLevel : QRCode.CorrectLevel.H
-    });
+    if (isDefault) {
+        makeQR(document.getElementById("qrcode"), 256, 256, data, settings);
+    } else if (settings.height <= 256 || settings.width <= 256) {
+        makeQR(document.getElementById("qrcode"), parseInt(settings.width), parseInt(settings.height), data, settings);
+    } else if (settings.height > 256 || settings.width > 256) {
+        let qr_div = document.createElement("div");
+        makeQR(qr_div, parseInt(settings.width), parseInt(settings.height), data, settings);
+    
+        chrome.tabs.create({ url: "../new_tab/new.html" }, function (tab) {
+            chrome.tabs.onUpdated.addListener(function (tabId, info) {
+                if (tabId === tab.id && info.status === 'complete') {
+                    chrome.tabs.sendMessage(tab.id, { qrHTML: qr_div.innerHTML });
+                }
+            });
+        });
+    }
 }
 
 window.onload = function(e) {
-    generate("Check my other projects: https://github.com/SunBlast2255");
+    generate("Check my other projects: https://github.com/SunBlast2255", true);
 };
 
 document.getElementById("generate-btn").addEventListener("click", function() {
