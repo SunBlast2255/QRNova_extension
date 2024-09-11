@@ -37,3 +37,12 @@ Click on the qr code anywhere to open the context menu. There are 2 items in the
 - Copy to QR code to clipboard
 
 Click on the necessary item of the context menu to select it. To close the context menu click anywhere.
+
+**Settings**
+
+To change the QR code parameters, you will need to open the settings. To do this, click on the gear in the upper right corner. In the settings you can specify
+
+- Background and foreground color
+- Width and height
+
+To reset the settings, click on the reset settings button. All input fields will be reset to their default values. To apply the settings, click the apply button in the upper right corner.
