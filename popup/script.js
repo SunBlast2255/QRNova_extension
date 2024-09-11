@@ -44,7 +44,12 @@ document.getElementById("generate-btn").addEventListener("click", function() {
     generate(data);
 });
 
-//Settings
+document.getElementById("url-input").addEventListener("keydown", function(e){
+    if(e.key === "Enter"){
+        generate(this.value);
+    }
+});
+
 
 async function getSettings(){
     return new Promise((resolve, reject) => {
