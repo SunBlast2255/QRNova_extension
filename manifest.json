@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "QRNova",
     "description": "Extension for generating QR codes",
-    "version": "1.0",
+    "version": "1.1",
     "action": {
       "default_popup": "popup/index.html"
     },
