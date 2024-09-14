@@ -50,6 +50,7 @@ document.getElementById("url-input").addEventListener("keydown", function(e){
     }
 });
 
+//settings
 
 async function getSettings(){
     return new Promise((resolve, reject) => {

@@ -59,3 +59,27 @@ span{
     color: white; 
 }
 
+/*Context menu*/
+
+.context-menu{
+    position: absolute;
+    display: none;
+}
+
+.context-item{
+    width: 165px;
+    height: fit-content;
+    background-color: #1C1C1E; 
+    color: #E0E0E0; 
+    padding: 10px;
+    border: 1px solid #303030; 
+    transition: background-color 0.1s ease, color 0.1s ease;
+    cursor: pointer;
+}
+
+.context-item:hover{
+    background-color: #FF9500;
+    color: white;
+}
+
+
