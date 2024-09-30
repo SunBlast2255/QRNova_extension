@@ -177,7 +177,7 @@ window.oncontextmenu = function(){
 
 //Donate
 document.getElementById("donate-btn").addEventListener("click", function(){
-    chrome.tabs.create({url: "../donate/donate.html"})
+    chrome.tabs.create({url: "../tabs/donate/donate.html"})
 });
 
 //links

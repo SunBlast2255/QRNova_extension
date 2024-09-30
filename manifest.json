@@ -16,5 +16,8 @@
       "48": "images/icons/48.png",
       "64": "images/icons/64.png",
       "128": "images/icons/128.png"
+    },
+    "background": {
+      "service_worker": "js/background.js"
     }
   }
